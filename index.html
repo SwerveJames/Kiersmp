@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="./imgs/Kiersmp-logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>Kiersmp Homepage</title>
 </head>
 <body>
     <div class="background-page-container">
@@ -20,13 +21,13 @@
     <div class="top-bar">
         <img class="top-bar-logo" src="./imgs/Kiersmp-logo.png">
         <div class="btns-holder">
-            <button class="btns">Home</button>
+            <a class="btns">Home</a>
             <span class="spacing">|</span>
-            <button class="btns">Rules</button>
+            <a class="btns">Rules</a>
             <span class="spacing">|</span>
-            <button class="btns">Store</button>
+            <a target="_blank" href="https://store.kiersmp.net/" class="btns">Store</a>
             <span class="spacing">|</span>
-            <button class="btns">Discord</button>
+            <a target="_blank" href="https://discord.kiersmp.net/" class="btns">Discord</a>
             
         </div>
 
@@ -37,7 +38,7 @@
     
     <span class="logo-container"><img class="logo" src="./imgs/Kiersmp-logo.png"></span>
     <div class="copy-ip">
-        <button class="copy-ip-btn">COPY IP</button>
+        <button id="copy-btn" class="copy-ip-btn">COPY IP</button>
         <span class="copy-ip-text">Kiersmp.net</span>
     </div>
 
@@ -72,12 +73,12 @@
                 <p class="Option-text">Server Status</p>
             </div>
 
-
-            <div id="community" class="Option Big-Option">
+            <a target="_blank" href="https://discord.kiersmp.net/" id="community" class="Option Big-Option">
+            
                 <img class="icon-large" src="./imgs/Community.png">
-                
                 <p class="Option-text">Join the community</p>
-            </div> 
+              
+            </a>
 
             <div class="Big-Option-video">
                 <iframe class="video" src="https://www.youtube.com/embed/egdNANsGe8E" title="How I Accidentally Got LT3..." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -107,3 +108,15 @@
 
 </body>
 </html>
+
+
+<script>
+    const copy_btn = document.getElementById("copy-btn");
+
+    function copyip(){
+        navigator.clipboard.writeText("Kiersmp.net");
+        alert("IP: 'Kiersmp.net' copied!");
+    }
+
+    copy_btn.addEventListener('click', copyip);
+</script>
