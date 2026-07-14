@@ -63,7 +63,7 @@ a{
     flex-direction: column;
     width: 12em;
     
-    padding: 2em 1em 0em 1em;
+    padding: 2em 2em 2em 2em;
     text-align: center;
     align-content: center;
     justify-content: center;
@@ -76,6 +76,7 @@ a{
     border-radius: 25px;
 }
 
+
 .Option-text{
     font-size: 1.3em;
     display: inline-flex;
@@ -83,24 +84,29 @@ a{
     justify-content: center;
     transition: 100ms;
     gap: 0em;
+    z-index: 2;
 }
 
 
 
 .icon{
     align-self: center;
-    position: relative;
-    width: 4em;
-    height: 4em;
+    position: absolute;
+    width: 7em;
+    height: 7em;
+    opacity: 0.3;
+    z-index: 1;
    
     
 }
 
 .icon-large{
     align-self: center;
-    position: relative;
+    position: absolute;
    
-    height: 7em;
+    height: 9em;
+    opacity: 0.3;
+    z-index: 1;
 }
 
 .news{
@@ -111,9 +117,39 @@ a{
     filter: drop-shadow(0px 0px 15px rgba(0, 255, 34, 0.7));
 }
 
+.status{
+    filter: drop-shadow(0px 0px 15px rgba(255, 0, 0, 0.7));
+}
+
 .Big-Option{
+    display: flex;
     grid-column: span 3;
-    width: auto;
+    background: linear-gradient(to right top, #4a3346, #6b3a66);
+    width: fit-content;
+
+    
+    
+    height: fit-content;
+    
+    padding: 1em 1em 1em 1em;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+
+    box-shadow: 0px 10px 20px rgba(0, 0, 0);
+
+    
+ 
+    border: 0;
+    border-radius: 10px;
+}
+
+.video{
+    border-radius: 10px;
+    width: 40em;
+    height: 20em;
 }
 
 #store{
@@ -229,11 +265,11 @@ a{
 
 
 .copy-ip{
-    position: absolute;
+    position: relative;
 
-    right: 5%;
+    margin-bottom: 3em;
     display: flex;
-    filter: drop-shadow(0px 0px 8px rgba(32, 218, 255, 0.7));
+    filter: drop-shadow(0px 0px 10px rgb(14, 94, 180));
     gap: 0;
 }
 
@@ -314,14 +350,14 @@ a{
 }
 
 
-@media (max-width: 1050px) {
-  .copy-ip{
-    display: none;
-  }
-}
+
 
 @media (max-width: 1420px) {
   .large-side-panel{
+    display: none;
+  }
+
+  .side-panel{
     display: none;
   }
 
